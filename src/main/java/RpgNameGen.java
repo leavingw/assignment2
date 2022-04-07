@@ -76,7 +76,6 @@ public class RpgNameGen {
         Countdown(userFirstName);
 
         List<String> goodExtensions = Arrays.asList("The Honest", "The Wizard", "Blood-Eater", "The Tremour Causing", "Sword Destroyer");
-        //String[] goodExt = new String[]{"The Honest", "The Wizard", "Blood-Eater", "The Tremour Causing", "Sword Destroyer"};
         int randomFromList = rand.nextInt(goodExtensions.size());
         String randomExt = goodExtensions.get(randomFromList);
         String newFullName = userFirstName+" "+randomExt;

@@ -9,19 +9,45 @@ class RpgNameGenTest {
 
     @Test
     @DisplayName("Returns a nice name composition of more than one name")
-    void newNameGood(String name) {
+    void test_NewNameGood() throws InterruptedException {
+
+        String name = "Johan";
+
+        String goodName = RpgNameGen.NewNameGood(name);
+
+        assertTrue(goodName.contains(name));
+        assertTrue(goodName.startsWith(name));
+        assertFalse(goodName.equals(name));
 
     }
 
     @Test
     @DisplayName("Returns a mean name composition of more than one name")
-    void newNameBad() {
+    void newNameBad() throws InterruptedException {
+
+        String name = "Johan";
+
+        String goodName = RpgNameGen.NewNameBad(name);
+
+        assertTrue(goodName.contains(name));
+        assertTrue(goodName.startsWith(name));
+        assertFalse(goodName.equals(name));
 
     }
 
     @Test
     @DisplayName("Returns a dumb name composition of more than one name")
-    void newNameDumb() {
+    void newNameDumb() throws InterruptedException {
+
+        String name = "Johan";
+
+        String goodName = RpgNameGen.NewNameDumb(name);
+
+        assertTrue(goodName.contains(name));
+        assertTrue(goodName.startsWith(name));
+        //assertFalse(goodName.equals(name));
+        //Found assertNotEquals was smarter since it besides telling me something was wrong, also pointed out what was wrong
+        assertNotEquals(goodName, name);
 
     }
 }
