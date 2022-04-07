@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,7 +16,7 @@ class RpgNameGenTest {
 
         assertTrue(goodName.contains(name));
         assertTrue(goodName.startsWith(name));
-        assertFalse(goodName.equals(name));
+        assertNotEquals(goodName, name);
 
     }
 
@@ -31,7 +30,7 @@ class RpgNameGenTest {
 
         assertTrue(goodName.contains(name));
         assertTrue(goodName.startsWith(name));
-        assertFalse(goodName.equals(name));
+        assertNotEquals(goodName, name);
 
     }
 
